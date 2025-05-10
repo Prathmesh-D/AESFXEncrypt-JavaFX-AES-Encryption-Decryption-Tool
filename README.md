@@ -54,9 +54,7 @@ AESFXEncrypt-JavaFX-AES-Encryption-Decryption-Tool/
 1. Open your project in VS Code.
 2. Go to the "Java Projects" section in the Explorer panel.
 3. Right-click "Referenced Libraries".
-4. Select "Add JARs", then navigate to your local JavaFX SDK directory, typically:
-            <p>E:/javafx-sdk-21.0.2/lib/</p>
-
+4. Select "Add JARs",then navigate to your local JavaFX SDK directory
 5. Select all .jar files and click OK.
 
 This step ensures your project recognizes the JavaFX classes at both compile-time and run-time.

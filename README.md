@@ -122,11 +122,11 @@ Again, replace /path/to/javafx-sdk/lib with your actual JavaFX SDK path.
 
 - Secret Key must be exactly 16 characters.
 - Encryption Mode: AES/ECB/PKCS5Padding 
-    <p>*Note: ECB is not recommended for sensitive data. Consider switching to CBC with IV for better security.*</p>
+    <p>*Note: ECB is not recommended for sensitive data. Consider switching to CBC with IV for better security.</p>
 - The key field changes color:
-    🟩 Green = valid (16 chars)
+    <p>🟩 Green = valid (16 chars)
 
-    🟨 Yellow = invalid
+    🟨 Yellow = invalid </p>
 
 - Basic error handling is provided for invalid input.
 

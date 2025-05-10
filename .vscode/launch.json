@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "AESFXEncrypt",
+      "request": "launch",
+      "mainClass": "src.AESFXEncrypt",
+      "projectName": "Git_79062b38"
+    },
+    {
+      "type": "java",
+      "name": "AESFXEncrypt",
+      "request": "launch",
+      "mainClass": "AESFXEncrypt",
+      "vmArgs": "--module-path E:/javafx-sdk-21.0.2/lib --add-modules javafx.controls,javafx.fxml"
+    }
+  ]
+}

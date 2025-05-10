@@ -1,0 +1,16 @@
+{
+    "java.project.sourcePaths": [
+        "AESFXEncrypt-JavaFX-AES-Encryption-Decryption-Tool/src"
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "e:\\javafx-sdk-21.0.2\\lib\\javafx.base.jar",
+        "e:\\javafx-sdk-21.0.2\\lib\\javafx.controls.jar",
+        "e:\\javafx-sdk-21.0.2\\lib\\javafx.fxml.jar",
+        "e:\\javafx-sdk-21.0.2\\lib\\javafx.graphics.jar",
+        "e:\\javafx-sdk-21.0.2\\lib\\javafx.media.jar",
+        "e:\\javafx-sdk-21.0.2\\lib\\javafx.swing.jar",
+        "e:\\javafx-sdk-21.0.2\\lib\\javafx.web.jar",
+        "e:\\javafx-sdk-21.0.2\\lib\\javafx-swt.jar"
+    ]
+}

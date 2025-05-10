@@ -41,9 +41,9 @@ RootFolder
       └── AESFXEncrypt-JavaFX-AES-Encryption-Decryption-Tool/
           ├── src
           |   └── AESFXTool/
-          |       └── AESFXEncrypt.java      # Main application file
+          |       └── AESFXEncrypt.java       # Main application file
           |
-          └── README.md                      # Project documentation 
+          └── README.md                       # Project documentation 
         
 
 ```

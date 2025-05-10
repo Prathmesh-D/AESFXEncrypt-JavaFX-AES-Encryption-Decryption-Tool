@@ -33,15 +33,18 @@ Visual Studio Code (Recommended IDE)
 
 ```plaintext
 
-AESFXEncrypt-JavaFX-AES-Encryption-Decryption-Tool/
-├── .vscode/
-│   ├── launch.json                # VS Code launch configuration
-│   └── settings.json              # VS Code JavaFX SDK reference
-├── src
-|   └── AESFXTool/
-|       └── AESFXEncrypt.java      # Main application file
-|
-└── README.md                      # Project documentation
+RootFolder
+      ├──.vscode/
+      |        ├── launch.json                # VS Code launch configuration
+      |        └── settings.json              # VS Code JavaFX SDK reference
+      |
+      └── AESFXEncrypt-JavaFX-AES-Encryption-Decryption-Tool/
+          ├── src
+          |   └── AESFXTool/
+          |       └── AESFXEncrypt.java      # Main application file
+          |
+          └── README.md                      # Project documentation 
+        
 
 ```
 

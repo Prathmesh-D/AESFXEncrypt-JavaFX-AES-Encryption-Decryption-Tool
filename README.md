@@ -55,7 +55,7 @@ AESFXEncrypt-JavaFX-AES-Encryption-Decryption-Tool/
 2. Go to the "Java Projects" section in the Explorer panel.
 3. Right-click "Referenced Libraries".
 4. Select "Add JARs", then navigate to your local JavaFX SDK directory, typically:
-      <p>E:/javafx-sdk-21.0.2/lib/</p>
+            <p>E:/javafx-sdk-21.0.2/lib/</p>
 
 5. Select all .jar files and click OK.
 
@@ -128,7 +128,7 @@ Again, replace /path/to/javafx-sdk/lib with your actual JavaFX SDK path.
 
 - Secret Key must be exactly 16 characters.
 - Encryption Mode: AES/ECB/PKCS5Padding 
-    <p>*Note: ECB is not recommended for sensitive data. Consider switching to CBC with IV for better security.</p>
+          <p>*Note: ECB is not recommended for sensitive data. Consider switching to CBC with IV for better security.</p>
 - The key field changes color:
     <p>🟩 Green = valid (16 chars)
 

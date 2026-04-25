@@ -1,4 +1,4 @@
-#AESFX — JavaFX Encryption Tool
+# AESFX — JavaFX Encryption Tool
 
 <div align="center">
 

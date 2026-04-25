@@ -1,156 +1,225 @@
-# 🔐 AES Encryption and Decryption Application (JavaFX)
+#AESFX — JavaFX Encryption Tool
 
-A simple JavaFX application that allows users to encrypt and decrypt text using the Advanced Encryption Standard (AES) algorithm.
-The GUI features two tabs: one for encryption and one for decryption.
+<div align="center">
 
----
+**Encrypt. Decrypt. Understand AES.**
 
-## 📋 Features
+*A lightweight desktop app for AES-based text encryption with a clean JavaFX interface.*
 
-- Encrypt and decrypt text using AES (ECB mode with PKCS5 padding)
-- 16-character secret key requirement with real-time validation
-- Random key generation button
-- Simple tabbed UI (Encrypt / Decrypt)
-- Color-coded key input field (green = valid, yellow = invalid)
+<br>
 
----
+![java](https://img.shields.io/badge/backend-Java-000000?style=for-the-badge)
+![ui](https://img.shields.io/badge/ui-JavaFX-000000?style=for-the-badge)
+![encryption](https://img.shields.io/badge/encryption-AES%20(ECB%20%7C%20PKCS5)-000000?style=for-the-badge)
 
-## 🚀 Prerequisites
-To run this application, ensure the following are installed:
-
-Java Development Kit (JDK) 8 or higher
-- [Download JDK](https://www.oracle.com/in/java/technologies/downloads/#jdk24-windows).
-
-JavaFX SDK (if not bundled with your JDK)
-- [Download JavaFX](https://gluonhq.com/products/javafx/).
-
-Visual Studio Code (Recommended IDE)
-- [Download VS Code](https://code.visualstudio.com/).
+</div>
 
 ---
 
-## 📁 Project Structure
+## What this is
 
-```plaintext
+AESFX is a simple desktop application built using JavaFX that lets you encrypt and decrypt text using the AES algorithm.
 
-RootFolder
-      ├──.vscode/
-      |        ├── launch.json                # VS Code launch configuration
-      |        └── settings.json              # VS Code JavaFX SDK reference
-      |
-      └── AESFXEncrypt-JavaFX-AES-Encryption-Decryption-Tool/
-          ├── src
-          |   └── AESFXTool/
-          |       └── AESFXEncrypt.java       # Main application file
-          |
-          └── README.md                       # Project documentation 
-        
+It’s designed to be:
+- easy to use  
+- visually clear  
+- useful for learning and demos  
+
+No unnecessary complexity. Just encryption, done right.
+
+---
+
+## Core capabilities
+
+<table>
+<tr>
+<td width="33%" valign="top">
+
+**Encryption**  
+`AES / ECB / PKCS5Padding`  
+
+Encrypt plain text into ciphertext using a 16-byte key.
+
+</td>
+
+<td width="33%" valign="top">
+
+**Validation**  
+`Real-time feedback`  
+
+Key input is validated instantly with visual indicators.
+
+</td>
+
+<td width="33%" valign="top">
+
+**UI Simplicity**  
+`JavaFX Tabs`  
+
+Clean separation between Encrypt and Decrypt workflows.
+
+</td>
+</tr>
+</table>
+
+---
+
+## What makes it useful
+
+- Instant encryption/decryption without setup friction  
+- Built-in key generator  
+- Clear visual feedback for valid/invalid input  
+- Ideal for crypto demos, viva, and learning AES basics  
+
+> This is not a production security tool — it's a focused implementation for understanding AES.
+
+---
+
+## How it works
+
+<table width="100%">
+<tr>
+<td width="50%" valign="top" style="padding: 16px; border: 1px solid #d0d7de; border-radius: 10px;">
+
+### Encrypt
+
+- Enter a 16-character key  
+- Type your plaintext  
+- Click **Encrypt**  
+- Get ciphertext instantly  
+
+</td>
+
+<td width="4%"></td>
+
+<td width="50%" valign="top" style="padding: 16px; border: 1px solid #d0d7de; border-radius: 10px;">
+
+### Decrypt
+
+- Use the same key  
+- Paste encrypted text  
+- Click **Decrypt**  
+- Recover original message  
+
+</td>
+</tr>
+</table>
+
+---
+
+## Key behavior
+
+- Key must be **exactly 16 characters (128-bit)**  
+- Field color feedback:
+  - 🟩 Valid key  
+  - 🟨 Invalid key  
+
+---
+
+## ⚠️ Important note
+
+AES is used in **ECB mode**, which has known weaknesses.
+
+> ECB does not hide patterns and is not suitable for sensitive or real-world secure systems.
+
+If extending this project, consider:
+- AES/CBC with IV  
+- AES/GCM (recommended)
+
+### Project structure
+<br>
 
 ```
+RootFolder/
+│
+├── .vscode/
+│ ├── launch.json
+│ └── settings.json
+│
+└── AESFXEncrypt-JavaFX-AES-Tool/
+├── src/
+│ └── AESFXTool/
+│ └── AESFXEncrypt.java
+│
+└── README.md
+```
+
+<br/>
 
 ---
 
-## ⚙️ Setup Instructions for Visual Studio Code
+## Setup (VS Code)
 
-### ✅ Add JavaFX SDK JARs
+### 1. Add JavaFX SDK
 
-1. Open your project in VS Code.
-2. Go to the "Java Projects" section in the Explorer panel.
-3. Right-click "Referenced Libraries".
-4. Select "Add JARs",then navigate to your local JavaFX SDK directory
-5. Select all .jar files and click OK.
+- Open project in VS Code  
+- Go to **Java Projects → Referenced Libraries**  
+- Add all `.jar` files from JavaFX SDK  
 
-This step ensures your project recognizes the JavaFX classes at both compile-time and run-time.
+---
 
-### ✅ Configure settings.json
+### 2. Configure `settings.json`
 
-```plaintext
-
+```
 {
-  "java.project.referencedLibraries": [
-    "lib/**/*.jar",
-    "/path/to/javafx-sdk/lib/*.jar"
-  ]
+"java.project.referencedLibraries": [
+"lib/**/.jar",
+"/path/to/javafx-sdk/lib/.jar"
+]
 }
-
 ```
-Replace "/path/to/javafx-sdk/lib" with the actual path where JavaFX is installed.
+
 
 ---
 
-### ✅ Configure launch.json
-
-```plaintext
-
+### 3. Configure `launch.json`
+```
 {
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "type": "java",
-      "name": "Launch",
-      "request": "launch",
-      "mainClass": "AESFXEncrypt",
-      "vmArgs": "--module-path /path/to/javafx-sdk/lib --add-modules javafx.controls,javafx.fxml"
-    }
-  ]
+"version": "0.2.0",
+"configurations": [
+{
+"type": "java",
+"name": "Launch",
+"request": "launch",
+"mainClass": "AESFXEncrypt",
+"vmArgs": "--module-path /path/to/javafx-sdk/lib --add-modules javafx.controls,javafx.fxml"
 }
-
+]
+}
 ```
-Again, replace /path/to/javafx-sdk/lib with your actual JavaFX SDK path.
+
+
+Replace `/path/to/javafx-sdk/lib` with your actual JavaFX SDK path.
 
 ---
 
-## ▶️ How to Run
+## Run the application
 
-1. Open Project in Visual Studio Code.
-2. Click the Run button or run via Run > Start Debugging.
-
----
-
-## 💡 Usage
-
-### 🔒 Encryption
-
-1. Go to Encrypt tab.
-2. Enter a 16-character secret key or click "Generate Key".
-3. Enter the text to encrypt.
-4. Click "Encrypt" → the encrypted output appears below.
-
-### 🔓 Decryption
-
-1. Go to Decrypt tab.
-2. Enter the same 16-character key used for encryption.
-3. Enter the encrypted text.
-4. Click "Decrypt" → the decrypted sentence will be displayed.
+- Open project  
+- Click **Run** or press **F5**  
 
 ---
 
-## ⚠️Notes
+## Tech stack
 
-- Secret Key must be exactly 16 characters.
-- Encryption Mode: AES/ECB/PKCS5Padding 
-          <p>*Note: ECB is not recommended for sensitive data. Consider switching to CBC with IV for better security.</p>
-- The key field changes color:
-    <p>🟩 Green = valid (16 chars)
-
-    🟨 Yellow = invalid </p>
-
-- Basic error handling is provided for invalid input.
+- Java (JDK 8+)  
+- JavaFX  
+- AES (javax.crypto)  
+- Base64 encoding  
 
 ---
 
-## 📚 References
+## Possible upgrades
 
-- [JavaFX Documentation](https://openjfx.io/).
-- [AES in Java - Oracle Crypto Guide](https://docs.oracle.com/javase/8/docs/technotes/guides/security/crypto/CryptoSpec.html#AES).
-- [Base64 Encoding/Decoding](https://docs.oracle.com/javase/8/docs/api/java/util/Base64.html).
-- [SecureRandom Class](https://docs.oracle.com/javase/8/docs/api/java/security/SecureRandom.html).
+- Switch to AES-GCM  
+- Add IV handling (CBC mode)  
+- File encryption support  
+- Password-based key derivation (PBKDF2)  
+- Save/load encrypted data  
 
 ---
 
 ## 🙋‍♂️ Author
-Prathmesh Deshkar <br>
-🔗 [My Profile](https://github.com/Prathmesh-D)
 
----
-
+**Prathmesh Deshkar**  
+🔗 https://github.com/Prathmesh-D  
